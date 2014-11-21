@@ -11,7 +11,7 @@
 \renewcommand{\thesisyear}{1776}
 
 %% Enter title of thesis
-\renewcommand{\thesistitle}{How to Found a Country, then Get a University Named After You}
+\renewcommand{\thesistitle}{How to Found a Country \& Get a University Named After You}
 \renewcommand{\thesisshorttitle}{How to Found a Country}
 
 %% Enter the copyright holder ( DEFAULT is \thesisauthor )
@@ -27,11 +27,12 @@
     Kerry Washington}
 
 %% Enter the dedication
-%\renewcommand{\thesisdedication}{Dedicated to my parents.}
+\renewcommand{\thesisdedication}{Dedicated to my parents.}
 
 %% Just for use with Demo document
 \usepackage[english]{babel}
 \usepackage{blindtext}
+\usepackage{todonotes}
 \begin{document}
 
 \frontmatter
@@ -39,11 +40,11 @@
 %\input{fake_setup}
 \mainmatter
 
-\Blinddocument
+\input{demo_content}
 
 \bibliographystyle{plainnat}
 \begin{spacing}{1.0}
-%\bibliography{}
+\bibliography{citations.bib}
 \end{spacing}
 
 \end{document}
