@@ -22,13 +22,11 @@
 %% in the same archive or directory.)
 %% Copyright (C) 1996 Long Duan
 %% 2005, 2007, and 2008 revisions by Greg Hackmann
+%% 2014 revisions by David Lu!!
 %%
 %% Please note:  This document class is not compatable with the
 %%               old LaTeX 2.09.  It uses LaTeX2e specific commands.
 %%
-%% Send bug reports to:
-%%
-%% gwh2@cse.wustl.edu
 %%
 \def\fileversion{1.7b}
 \def\filedate{07/01/2009}
