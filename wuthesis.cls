@@ -28,8 +28,8 @@
 %%               old LaTeX 2.09.  It uses LaTeX2e specific commands.
 %%
 %%
-\def\fileversion{1.7b}
-\def\filedate{07/01/2009}
+\def\fileversion{1.8}
+\def\filedate{02/03/2015}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -80,17 +80,17 @@
    }
 }
 \DeclareOption{phdthesis}{
-    \newcommand{\thesistype}{dissertation}
+    \newcommand{\thesistype}{Dissertation}
     \newcommand{\thesisdegree}{Doctor of Philosophy}
     \newcommand{\thesisdegreeabbreviation}{Ph.D.}
 }
 \DeclareOption{dscthesis}{
-    \newcommand{\thesistype}{dissertation}
+    \newcommand{\thesistype}{Dissertation}
     \newcommand{\thesisdegree}{Doctor of Science}
     \newcommand{\thesisdegreeabbreviation}{D.Sc.}
 }
 \DeclareOption{mastersthesis}{
-    \newcommand{\thesistype}{thesis}
+    \newcommand{\thesistype}{Thesis}
     \newcommand{\thesisdegree}{Master of Science}
     \newcommand{\thesisdegreeabbreviation}{M.S.}
 }
@@ -111,6 +111,7 @@
 \RequirePackage[normalem]{ulem}
 \RequirePackage{setspace}
 \RequirePackage{remreset}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
 \@removefromreset{footnote}{chapter}
 \newcommand{\thesisauthor}{Ima Gooden-Reddi}
 \newcommand{\thesisauthorlastname}{Gooden-Reddi}
@@ -123,6 +124,7 @@
 \newcommand{\thesiscommittee}{Katherine Doe, Chair \\
 Michael Allen \\
 Robert Edward Thomas}
+\newcommand{\thesisschool}{School of Engineering and Applied Science}
 \newcommand{\thesisdepartment}{Department of Computer Science and Engineering}
 \newcommand{\thesisfield}{Computer Science}
 
@@ -133,9 +135,9 @@ Robert Edward Thomas}
 \advance\textheight -18pt % header
 \advance\textheight -12pt % footer
 \setlength{\textwidth}{8.5in}
-\advance\textwidth -2.5in % left and right margins
-\setlength{\oddsidemargin}{1.5in}
-\setlength{\evensidemargin}{1.5in}
+\advance\textwidth -2in % left and right margins
+\setlength{\oddsidemargin}{1in}
+\setlength{\evensidemargin}{1in}
 \setlength{\topmargin}{1in}
 \setlength{\headheight}{0pt}
 \setlength{\headsep}{18pt}
@@ -210,21 +212,21 @@ Robert Edward Thomas}
     \begin{center}
     \begin{doublespace}
       WASHINGTON UNIVERSITY IN ST.\ LOUIS \\
-      School of Engineering and Applied Science \\
+      \thesisschool \\
       \thesisdepartment
     \end{doublespace}
 
     \vfill
 
     \begin{singlespace}
-      Thesis Examination Committee: \\
+      \thesistype\ Examination Committee: \\
       \thesiscommittee
     \end{singlespace}
 
     \vfill
 
     \begin{doublespace}
-          \@uppercase{\thesistitle} \\
+          {\thesistitle} \\
           by \\
           \thesisstudent \\
     \end{doublespace}
@@ -232,7 +234,7 @@ Robert Edward Thomas}
     \vfill
 
     \begin{singlespace}
-      A \thesistype\ presented to the \\
+      A \MakeLowercase{\thesistype}\ presented to the \\
       Graduate School of Arts \& Sciences \\
       of Washington University in \\
       partial fulfillment of the \\
@@ -267,7 +269,7 @@ Robert Edward Thomas}
      \begin{center}
         \begin{doublespace}
 \vbox to 18pt{}
-ABSTRACT OF THE THESIS \\
+ABSTRACT OF THE \@uppercase{\thesistype} \\
 \vspace{18pt}
 \thesistitle \\
 by \\
